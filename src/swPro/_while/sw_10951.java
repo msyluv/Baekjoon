@@ -1,31 +1,27 @@
-package swPro._for;
+package swPro._while;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class sw_15552 {
+public class sw_10951 {
 
-    static int T;
-    static int A;
-    static int B;
-    static int SUM;
+    private static final String NEW_LINE = "\n";
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
+        String line;
 
-        T = Integer.parseInt(br.readLine());
-
-        for (int i = 0; i < T; i++) {
+        while ( (line=br.readLine()) != null) {
             st = new StringTokenizer(br.readLine());
-            A = Integer.parseInt(st.nextToken());
-            B = Integer.parseInt(st.nextToken());
-            SUM = A+B;
-            bw.write(String.valueOf(SUM));
-            bw.write("\n");
+            int A = Integer.parseInt(st.nextToken());
+            int B = Integer.parseInt(st.nextToken());
+
+            bw.write(A + B + NEW_LINE);
         }
+        br.close();
         bw.flush();
+        bw.close();
     }
 }

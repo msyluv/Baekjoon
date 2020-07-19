@@ -1,31 +1,23 @@
 package swPro._for;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class sw_15552 {
+public class sw_11021 {
 
     static int T;
-    static int A;
-    static int B;
-    static int SUM;
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
-
         T = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < T; i++) {
             st = new StringTokenizer(br.readLine());
-            A = Integer.parseInt(st.nextToken());
-            B = Integer.parseInt(st.nextToken());
-            SUM = A+B;
-            bw.write(String.valueOf(SUM));
-            bw.write("\n");
+            System.out.println("Case #" + (i+1) + ": " +
+                    (Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())) );
         }
-        bw.flush();
     }
 }
